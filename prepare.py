@@ -120,7 +120,43 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": []
+   "source": [
+    "def select_kbest(X_train, y_train, k):\n",
+    "    '''\n",
+    "    Takes in the predictors (X_train_scaled), the target (y_train), \n",
+    "    and the number of features to select (k) \n",
+    "    and returns the names of the top k selected features based on the SelectKBest class\n",
+    "    '''\n",
+    "    f_selector = SelectKBest(f_regression, k)\n",
+    "    f_selector = f_selector.fit(X_train, y_train)\n",
+    "    X_train_reduced = f_selector.transform(X_train)\n",
+    "    f_support = f_selector.get_support()\n",
+    "    f_feature = X_train.iloc[:,f_support].columns.tolist()\n",
+    "    return f_feature"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def rfe(X_train, y_train, k):\n",
+    "    '''\n",
+    "    Takes in the predictor (X_train_scaled), the target (y_train), \n",
+    "    and the number of features to select (k).\n",
+    "    Returns the top k features based on the RFE class.\n",
+    "    '''\n",
+    "    lm = LinearRegression()\n",
+    "    rfe = RFE(lm, k)\n",
+    "    # Transforming data using RFE\n",
+    "    X_rfe = rfe.fit_transform(X_train, y_train)\n",
+    "    #Fitting the data to model\n",
+    "    lm.fit(X_rfe,y_train)\n",
+    "    mask = rfe.support_\n",
+    "    rfe_features = X_train.loc[:,mask].columns.tolist()\n",
+    "    return rfe_features"
+   ]
   }
  ],
  "metadata": {
