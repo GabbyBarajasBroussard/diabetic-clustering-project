@@ -76,16 +76,16 @@ def data_split(df, stratify_by='time_in_hospital'):
     # split train_validate off into train (70% of 80% = 56%) and validate (30% of 80% = 24%)
     train, validate = train_test_split(train_validate, test_size=.3, random_state=123)
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns=['logerror'])
-    y_train = train['logerror']
+    X_train = train.drop(columns=['time_in_hospital'])
+    y_train = train['time_in_hospital']
     
     # split validate into X (dataframe, drop target) & y (series, keep target only)
-    X_validate = validate.drop(columns=['logerror'])
-    y_validate = validate['logerror']
+    X_validate = validate.drop(columns=['time_in_hospital'])
+    y_validate = validate['time_in_hospital']
     
     # split test into X (dataframe, drop target) & y (series, keep target only)
-    X_test = test.drop(columns=['logerror'])
-    y_test = test['logerror']
+    X_test = test.drop(columns=['time_in_hospital'])
+    y_test = test['time_in_hospital']
     
     return train, validate, test, X_train, y_train, X_validate, y_validate, X_test, y_test
 
