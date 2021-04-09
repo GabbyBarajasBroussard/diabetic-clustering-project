@@ -48,10 +48,11 @@ def clean_diabetic_data():
        'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride',
        'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide',
        'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone',
-       'tolazamide', 'examide', 'citoglipton', 'insulin',
+       'tolazamide', 'examide', 'citoglipton',
        'glyburide-metformin', 'glipizide-metformin',
        'glimepiride-pioglitazone', 'metformin-rosiglitazone',
-       'metformin-pioglitazone','num_medications','max_glu_serum','A1Cresult', 'race', 'gender','age', 'weight' ])
+       'metformin-pioglitazone','num_medications','max_glu_serum','A1Cresult'])
+    df= df.drop(columns=['repaglinide_No', 'nateglinide_No', 'chlorpropamide_No','glimepiride_No', 'acetohexamide_No','glipizide_No','glyburide_No','tolbutamide_No', 'pioglitazone_No', 'rosiglitazone_No','acarbose_No','miglitol_No', 'troglitazone_No', 'tolazamide_No', 'examide_No', 'citoglipton_No', 'insulin_No','glyburide-metformin_No','glipizide-metformin_No', 'glimepiride-pioglitazone_No','metformin-rosiglitazone_No', 'metformin-pioglitazone_No'])
     return df
 
 
@@ -76,15 +77,15 @@ def data_split(df, stratify_by='time_in_hospital'):
     # split train_validate off into train (70% of 80% = 56%) and validate (30% of 80% = 24%)
     train, validate = train_test_split(train_validate, test_size=.3, random_state=123)
     # split train into X (dataframe, drop target) & y (series, keep target only)
-    X_train = train.drop(columns=['time_in_hospital'])
+    X_train = train.drop(columns=['time_in_hospital','race', 'gender', 'age', 'weight','insulin'])
     y_train = train['time_in_hospital']
     
     # split validate into X (dataframe, drop target) & y (series, keep target only)
-    X_validate = validate.drop(columns=['time_in_hospital'])
+    X_validate = validate.drop(columns=['time_in_hospital', 'race', 'gender', 'age', 'weight','insulin'])
     y_validate = validate['time_in_hospital']
     
     # split test into X (dataframe, drop target) & y (series, keep target only)
-    X_test = test.drop(columns=['time_in_hospital'])
+    X_test = test.drop(columns=['time_in_hospital', 'race', 'gender', 'age', 'weight','insulin'])
     y_test = test['time_in_hospital']
     
     return train, validate, test, X_train, y_train, X_validate, y_validate, X_test, y_test
