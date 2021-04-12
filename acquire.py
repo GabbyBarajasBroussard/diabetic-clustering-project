@@ -21,5 +21,5 @@ def get_diabetic_data():
 
 
 def get_id_data():
-    df= pd.read_csv('diabetic_data.csv', index_col=0)
-
+    df2= pd.read_csv('IDs_mapping.csv', index_col=0)
+    return df2
