@@ -16,7 +16,7 @@ All files referenced in this presentation are available in the github repository
 
 Hypotheses:
 
-##### Hypothesis Testing #1 (ANOVA)
+#### Hypothesis Testing #1 (ANOVA)
 $H_0$: There is no difference in length of hospital stay between each race.
 
 $H_a$: There is a significant difference in length of hospital stay based on race.
