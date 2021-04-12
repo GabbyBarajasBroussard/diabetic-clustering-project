@@ -78,7 +78,7 @@ Each step in my process is recorded and staged on a Trello board at: https://tre
 ## Model:
 
 - Developed a baseline model.
-- Modeled train and validate data on OLS, Lasso Lars, and Polynomial Regression.
+- Modeled train and validate data on OLS, Lasso Lars, and GLM Regression Models.
 - Modeled test on Linear Regression.
 Deliver:
 
