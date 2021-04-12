@@ -2,7 +2,9 @@
 -Clustering Project: Drivers of time in hospital for diabetic patients.
 
 - Data Science Team Members: Gabby Broussard
+
 <img src='unsplash.jpg' style = 'width:1100px;height:700px'/>
+
 ## Project Summary:
 - I have been asked to analyze data obtained from hospital admissions for diabetic patients between 1999 and 2008 in order to discover the drivers of the length of time spent in the hospital.
 
