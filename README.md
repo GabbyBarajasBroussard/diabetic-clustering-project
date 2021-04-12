@@ -49,7 +49,6 @@ Each step in my process is recorded and staged on a Trello board at: https://tre
 Plan:
 
 Create GitHub organization and set up GitHub repo, to include readme.md and .gitignore.
-Use Sequel to investigate the database and compose an appropriate query
 Brainstorm a list of questions and form hypotheses about how variables might impact one another.
 Acquire:
 
@@ -61,7 +60,7 @@ Prepare:
 
 Carefully reviewed data, identifying any missing, erroneous, or invalid values.
 Explored value counts of the dataframe and visualized distribution of univariate data
-Created and called a function, wrangle_zillow, as a reproducible component that cleans/prepares data for analysis by: renames columns, handling missing values, adjusts data types, handles any data integrity
+Created and called a function, prepare, as a reproducible component that cleans/prepares data for analysis by: renames columns, handling missing values, adjusts data types, handles any data integrity
 Split the data into train, validate and test sets.
 Explore:
 
