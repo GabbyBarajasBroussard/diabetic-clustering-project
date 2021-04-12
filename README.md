@@ -2,7 +2,7 @@
 -Clustering Project: Drivers of time in hospital for diabetic patients.
 
 - Data Science Team Members: Gabby Broussard
-
+<img src='unsplash.jpg' style = 'width:1100px;height:700px'/>
 ## Project Summary:
 - I have been asked to analyze data obtained from hospital admissions for diabetic patients between 1999 and 2008 in order to discover the drivers of the length of time spent in the hospital.
 
@@ -14,7 +14,7 @@ Data Source: https://archive.ics.uci.edu/ml/datasets/Diabetes+130-US+hospitals+f
 - Use clustering methodologies to engineer new features and visualize factors that contribute to length of time spent in the hospital. 
 - All files referenced in this presentation are available in the github repository for this project: https://github.com/GabbyBarajasBroussard/diabetic-clustering-project
 
-Hypotheses:
+## Hypotheses:
 
 #### Hypothesis Testing #1 (ANOVA)
 $H_0$: There is no difference in length of hospital stay between each race.
