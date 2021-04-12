@@ -10,6 +10,7 @@ import scipy as sp
 import os
 import sklearn.preprocessing
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 from sklearn.feature_selection import SelectKBest, RFE, f_regression
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler, QuantileTransformer, PowerTransformer, RobustScaler, MinMaxScaler
