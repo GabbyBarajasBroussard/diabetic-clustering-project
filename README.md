@@ -90,8 +90,9 @@ Download the following files from https://github.com/GabbyBarajasBroussard/diabe
 
 acquire.py
 prepare.py
+download .csv from: https://archive.ics.uci.edu/ml/datasets/Diabetes+130-US+hospitals+for+years+1999-2008
 
-
+## Sources:
 Data obtained from: https://archive.ics.uci.edu/ml/datasets/Diabetes+130-US+hospitals+for+years+1999-2008
 Photo by <a href="https://unsplash.com/@diabetesmagazijn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Diabetesmagazijn.nl</a> on <a href="https://unsplash.com/s/photos/diabetes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
